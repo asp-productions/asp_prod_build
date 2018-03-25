@@ -6,12 +6,27 @@
 # Basically, we don't want the whole WP core included.
 #
 
-# Ignore everything in root except wp-content dir
-/*
+# Blacklist
+database/
+build.sh
+
+!local/*
+!local/www/*
+local/www/*
+
+local/*/wp-admin/*
+local/*/wp-includes/*
+local/*/wp-content/*
+
+!local/www/wp-content/
+!local/www/wp-content/themes
+
+local/www/wp-content/themes/*
+local/www/wp-content/themes/twentyfifteen
+local/www/wp-content/themes/twentyseventeen
+local/www/wp-content/themes/twentysixteen
 
 !local/www/wp-content/themes/asp
-!local/www/wp-content/plugins/
-!Makefile
-!docker-compose-dev.yml
-!.gitignore
-!readme.md
+
+#whitelist
+**.DS_Store
