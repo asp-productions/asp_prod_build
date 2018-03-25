@@ -1,0 +1,43 @@
+version: '3.3'
+services:
+
+    db:
+      image: mariadb
+      container_name: wp_asp_db
+      #build: .
+      volumes:
+       - ./database:/var/lib/mysql
+      ports:
+       - "3306:3306"
+      environment:
+         MYSQL_ROOT_PASSWORD: wordpress
+         MYSQL_DATABASE: wordpress
+         MYSQL_USER: wordpress
+         MYSQL_PASSWORD: wordpress
+      #command: ["/build.sh"]
+
+    wordpress:
+      container_name: wp_asp_wordpress
+      image: wordpress:4.9.4-php7.0-apache
+      depends_on:
+        - db
+      ports:
+        - "8084:80"
+      environment:
+       WORDPRESS_DB_HOST: db:3306
+       WORDPRESS_DB_PASSWORD: wordpress
+       WORDPRESS_DB_USER: wordpress
+      volumes:
+       - ./local/www:/var/www/html
+
+    mailcatcher:
+      container_name: wp_asp_smtp
+      image: ministryofjustice/mailcatcher
+      environment:
+        VIRTUAL_HOST: mail.intranet.docker
+        VIRTUAL_PORT: 1080
+      ports:
+        - "1080:1080"
+
+volumes:
+    db_data:

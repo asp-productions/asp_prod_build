@@ -1,0 +1,17 @@
+# -----------------------------------------------------------------
+# .gitignore for WordPress ASP Productions
+# ver 0.1
+#
+# As a default, ignore everything except /wp-content and a few select files.
+# Basically, we don't want the whole WP core included.
+#
+
+# Ignore everything in root except wp-content dir
+/*
+
+!local/www/wp-content/themes/asp
+!local/www/wp-content/plugins/
+!Makefile
+!docker-compose-dev.yml
+!.gitignore
+!readme.md
