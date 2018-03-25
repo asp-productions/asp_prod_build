@@ -2,31 +2,16 @@
 # .gitignore for WordPress ASP Productions
 # ver 0.1
 #
-# As a default, ignore everything except /wp-content and a few select files.
-# Basically, we don't want the whole WP core included.
-#
 
 # Blacklist
-database/
-build.sh
 
-!local/*
-!local/www/*
-local/www/*
-
-local/*/wp-admin/*
-local/*/wp-includes/*
-local/*/wp-content/*
-
-!local/www/wp-content/
-!local/www/wp-content/themes
+*
+**.DS_Store
 
 local/www/wp-content/themes/*
 local/www/wp-content/themes/twentyfifteen
 local/www/wp-content/themes/twentyseventeen
 local/www/wp-content/themes/twentysixteen
 
+# Whitelist
 !local/www/wp-content/themes/asp
-
-#whitelist
-**.DS_Store
