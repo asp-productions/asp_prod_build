@@ -1,9 +1,16 @@
 # ASP Productions build repository
 ASP Productions Wordpress theme build repo to support the theme. Helpful environment tools to get going working on the theme.
 
+# Docker
+
+Install Docker on your machine.
+* Make sure ports listed in Docker Compose file here are not blocked.
+* CD into this directory and run `make launch`
+
+
 # Install Node SASS/Build/Watch
 
-CD into theme directory.
+Start by CD into theme directory.
 
 Install Node.js
 `brew install node`
