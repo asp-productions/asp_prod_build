@@ -23,5 +23,5 @@ Install our dev-dependencies:
 ```
 
 ## Run or create Makefile to run these.
-npm run build-css
-npm run watch-css
+* npm run build-css
+* npm run watch-css
