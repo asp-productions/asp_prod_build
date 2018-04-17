@@ -1,5 +1,5 @@
 # ASP Productions build repository
-ASP Productions Wordpress theme build repo to support the theme. Helpful environment tools to get going working on the theme.
+ASP Productions Wordpress theme build repo to support the theme. Helpful environment tools to get going working on the [asp_prod_build](https://github.com/asp-productions/asp_prod) theme.
 
 # Docker
 
